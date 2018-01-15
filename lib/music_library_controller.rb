@@ -52,10 +52,8 @@ class MusicLibraryController
     # binding.pry
     artists_alpha = Artist.all.sort {|a, b| a.name <=> b.name}
     artists_alpha.map.with_index do |artist, index|
-       puts "#{index + 1}. #{artist.name}"}
+       puts "#{index + 1}. #{artist.name}"
     end
-
-
   end
 
 end
