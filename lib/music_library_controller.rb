@@ -65,7 +65,7 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     input = gets.strip
-    binding.pry
+    # binding.pry
     if Song.all.include?(input)
       Song.all.find_all {|song| song.artist.name == input}
     else
