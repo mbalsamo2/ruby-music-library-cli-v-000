@@ -42,16 +42,19 @@ class MusicLibraryController
   end
 
   def list_songs
-     list = Song.all.sort {|a, b| a.name <=> b.name}
-     list.map.with_index do |song, index|
-       puts "#{index + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
-     end
+    songs_alpha = Song.all.sort {|a, b| a.name <=> b.name}
+    songs_alpha.map.with_index do |song, index|
+      puts "#{index + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+    end
   end
 
   def list_artists
-    binding.pry
-    artist_alpha = Song.all.sort {|a, b| a.song.artist.name <=> b.song.artist.name}
-    artist_alpha.map.with_index {|artist, index| puts "#{index + 1}. #{artist}"}
+    # binding.pry
+    artists_alpha = Artist.all.sort {|a, b| a.name <=> b.name}
+    artists_alpha.map.with_index do |artist, index|
+       puts "#{index + 1}. #{artist.name}"}
+    end
+
 
   end
 
