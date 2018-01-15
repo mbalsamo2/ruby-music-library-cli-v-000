@@ -56,7 +56,7 @@ class MusicLibraryController
   end
 
   def list_genres
-    binding.pry
+
     genre_alpha = Genre.all.sort {|a, b| a.name <=> b.name}
     genre_alpha.map.with_index do |genre, index|
       puts "#{index + 1}. #{genre.name}"
