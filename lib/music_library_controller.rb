@@ -55,4 +55,9 @@ class MusicLibraryController
     end
   end
 
+  def list_genres
+    binding.pry
+    genre_alpha = Genre.all.sort {|a, b| a.name <=> b.name}
+
+  end
 end
