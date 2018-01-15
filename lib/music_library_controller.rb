@@ -50,7 +50,8 @@ class MusicLibraryController
 
   def list_artists
     binding.pry
-    Song.all.map.with_index {|song, index| puts "#{index + 1}. #{song.artist.name}" }
+    Song.all.map.with_index {|song, index| "#{song}" }
+    puts "#{index + 1}. #{song.artist.name}"
   end
 
 end
