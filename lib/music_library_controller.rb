@@ -49,7 +49,9 @@ class MusicLibraryController
   end
 
   def list_artists
-
+    Song.all.map.with_index do |song, index|
+      puts "#{index + 1}. #{song.artist.name}"
+    end
   end
 
 end
